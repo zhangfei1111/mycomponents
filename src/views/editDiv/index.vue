@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref, toRefs } from 'vue';
+import { nextTick, reactive, ref, toRefs } from 'vue';
 import editDivVue from './editDiv.vue';
 const editRef = ref()
 const insert = () => {
@@ -47,6 +47,10 @@ const textContent = reactive({
     content: '',
     realContent: ' gggggggggg<input class=\"customer-name msg-value-blue\" disabled=\"\" value=\"客户昵称\">'
 })
+const handleCancel = () => {
+    textContent.realContent = '333333'
+    console.log(textContent, 'textContent')
+}
 const editInput = (val) => {
     replaceContent(val)
     console.log(replaceContent(val), '抛出的值')
@@ -65,10 +69,12 @@ const replaceContent = (data) => {
 <template>
     <a-button type="link" @click="insert">【插入客户昵称】</a-button>
     <editDivVue ref="editRef" v-model="textContent.realContent" @input="editInput" />
+    <a-button type="primary" @click="handleCancel">取消</a-button>
+
 </template>
 
 <style scoped lang='scss'>
-::v-deep .msg-value-blue {
+:deep .msg-value-blue {
     color: #40a9ff;
     background: unset;
     border: none;

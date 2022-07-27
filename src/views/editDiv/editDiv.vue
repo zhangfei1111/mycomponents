@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, defineEmits, watch, defineProps, defineExpose } from 'vue';
+import { onMounted, ref, watch, watchEffect } from 'vue';
 const props = defineProps({
     modelValue: String
 })
@@ -21,7 +21,7 @@ const handleInput = () => {
 }
 const emit = defineEmits(['input'])
 onMounted(() => {
-    console.log(props.modelValue, 'props')
+    console.log(innerText.value, 'props')
     divContent.value.addEventListener('keydown', function (e) {
         if (e.which === 8 || e.which === 46) {
             const s = window.getSelection()
@@ -94,7 +94,7 @@ const insert = (html) => {
     height: 200px;
     overflow: hidden;
     overflow-y: auto;
-    margin:0 20px;
+    margin: 0 20px;
     border: 1px solid #40a9ff;
     border-radius: 4px;
 }

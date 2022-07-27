@@ -5,8 +5,7 @@ import {
 const routerHistory = createWebHistory()
 const router = createRouter({
     history: routerHistory,
-    routes: [
-        {
+    routes: [{
             path: '/',
             name: 'Home',
             component: () => import('../views/home.vue')
@@ -15,6 +14,10 @@ const router = createRouter({
             path: '/editDiv',
             name: 'EditDiv',
             component: () => import('../views/editDiv/index.vue')
+        }, {
+            path: '/cs',
+            name: 'CS',
+            component: () => import('../views/cs/index.vue')
         },
     ]
 })
