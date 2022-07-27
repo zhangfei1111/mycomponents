@@ -74,7 +74,7 @@ const replaceContent = (data) => {
 </template>
 
 <style scoped lang='scss'>
-:deep .msg-value-blue {
+:deep(.msg-value-blue) {
     color: #40a9ff;
     background: unset;
     border: none;
