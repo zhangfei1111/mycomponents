@@ -1,0 +1,30 @@
+{
+  "id": "1361524",
+  "name": "pcBaseProject",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-ali",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1304886",
+      "name": "收起菜单",
+      "font_class": "shouqicaidan",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "1304894",
+      "name": "展开菜单",
+      "font_class": "zhankaicaidan",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "23333389",
+      "name": "Customer nickname",
+      "font_class": "a-Customernickname",
+      "unicode": "e6fe",
+      "unicode_decimal": 59134
+    }
+  ]
+}
